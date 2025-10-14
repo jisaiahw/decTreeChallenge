@@ -147,10 +147,9 @@ ul.task-list li input[type="checkbox"] {
 <p>You have not been coached through setting up a Python environment. You will need to set up a Python environment and install the necessary packages to run this code - takes about 15 minutes; see <a href="https://quarto.org/docs/projects/virtual-environments.html">https://quarto.org/docs/projects/virtual-environments.html</a>. Alternatively, delete the Python code and only leave the remaining R code that is provided. You can see the executed Python output at my GitHub pages site: <a href="https://flyaflya.github.io/decTreeChallenge/">https://flyaflya.github.io/decTreeChallenge/</a>.</p>
 </div>
 </div>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Critical Analysis: The Encoding Problem</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Proper Categorical Encoding: The Solution</a></li></ul>
-<div class="tab-content">
-<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+</section>
+<section id="critical-analysis-the-encoding-problem" class="level2">
+<h2 class="anchored" data-anchor-id="critical-analysis-the-encoding-problem">Critical Analysis: The Encoding Problem</h2>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -170,28 +169,19 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>The Real Issue:</strong> Zip codes are categorical variables representing discrete geographic areas. The numerical values have no inherent order or magnitude relationship to house prices. These must be modelled as categorical variables.</p>
 </div>
 </div>
-</div>
-<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+</section>
+<section id="proper-categorical-encoding-the-solution" class="level2">
+<h2 class="anchored" data-anchor-id="proper-categorical-encoding-the-solution">Proper Categorical Encoding: The Solution</h2>
 <p>Now let’s repeat the analysis with zipCode properly encoded as categorical variables to see the difference.</p>
 <p><strong>R Approach:</strong> Convert zipCode to a factor (categorical variable)<br>
 <strong>Python Approach:</strong> One-hot encode zipCode (create dummy variables for each zip code)</p>
 <section id="categorical-encoding-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="categorical-encoding-analysis">Categorical Encoding Analysis</h3>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">R</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-
-</div>
-</div>
-</div>
+<p><strong>Note:</strong> The categorical analysis demonstrates how properly encoding zip codes as categorical variables (factors in R) leads to more meaningful feature importance rankings that align with business intuition about location’s importance in real estate pricing.</p>
 </section>
-<section id="tree-visualization-categorical-zipcode" class="level3">
-<h3 class="anchored" data-anchor-id="tree-visualization-categorical-zipcode">Tree Visualization: Categorical zipCode</h3>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Challenge Requirements 📋</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Getting Started: Repository Setup 🚀</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Discussion Questions for Challenge</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">Grading Rubric 🎓</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-5" role="tab" aria-controls="tabset-2-5" aria-selected="false" href="">Submission Checklist ✅</a></li></ul>
-<div class="tab-content">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+</section>
+<section id="challenge-requirements" class="level2">
+<h2 class="anchored" data-anchor-id="challenge-requirements">Challenge Requirements 📋</h2>
 <section id="minimum-requirements-for-any-points-on-challenge" class="level3">
 <h3 class="anchored" data-anchor-id="minimum-requirements-for-any-points-on-challenge">Minimum Requirements for Any Points on Challenge</h3>
 <ol type="1">
@@ -210,8 +200,9 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ol>
 </section>
-</div>
-<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+</section>
+<section id="getting-started-repository-setup" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started-repository-setup">Getting Started: Repository Setup 🚀</h2>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -292,17 +283,43 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-</div>
-<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+</section>
+<section id="discussion-questions-for-challenge" class="level2">
+<h2 class="anchored" data-anchor-id="discussion-questions-for-challenge">Discussion Questions for Challenge</h2>
 <p><strong>Your Task:</strong> Add thoughtful narrative answers to these two questions in the Discussion Questions section of your rendered HTML site.</p>
-<ol type="1">
-<li><strong>Numerical vs Categorical Encoding:</strong> There are four models above, two in R and two in Python. For each language, the models differ by how zip code is modelled, either as a numerical variable or as a categorical variable. Given what you know about zip codes and real estate prices, how should zip code be modelled, numerically or categorically?</li>
-</ol>
+<section id="question-1-numerical-vs-categorical-encoding" class="level3">
+<h3 class="anchored" data-anchor-id="question-1-numerical-vs-categorical-encoding">Question 1: Numerical vs Categorical Encoding</h3>
+<p><strong>Question:</strong> There are four models above, two in R and two in Python. For each language, the models differ by how zip code is modelled, either as a numerical variable or as a categorical variable. Given what you know about zip codes and real estate prices, how should zip code be modelled, numerically or categorically?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p><strong>Zip codes should be modelled as categorical variables.</strong> Zip codes represent discrete geographic areas without inherent numerical relationships—a zip code of 50013 is not “greater than” 50012 in any meaningful way for house prices. When treated as numerical variables, decision trees create meaningless splits like “zipCode &lt; 50012.5” that have no real-world interpretation. In real estate, location is typically one of the most important factors determining property values, with neighborhood characteristics, school districts, and local market conditions varying significantly by geographic area. Our numerical model shows zip codes with low feature importance, contradicting our business intuition that location should matter significantly. This disconnect indicates we’ve misrepresented the data. Proper categorical encoding allows the decision tree to identify which specific geographic areas are associated with higher or lower property values, leading to more accurate predictions and interpretable insights that actually reflect real-world real estate dynamics.</p>
-<ol start="2" type="1">
-<li><strong>R vs Python Implementation Differences:</strong> When modelling zip code as a categorical variable, the output tree and feature importance differs quite significantly between R and Python. Investigate why this is the case. Which language would you say does a better job of modelling zip code as a categorical variable? Why is this the case? Do you see any documentation suggesting the other language does a better job? If so, please provide a quote from the documentation.</li>
-</ol>
+</div>
+</div>
+</section>
+<section id="question-2-r-vs-python-implementation-differences" class="level3">
+<h3 class="anchored" data-anchor-id="question-2-r-vs-python-implementation-differences">Question 2: R vs Python Implementation Differences</h3>
+<p><strong>Question:</strong> When modelling zip code as a categorical variable, the output tree and feature importance differs quite significantly between R and Python. Investigate why this is the case. Which language would you say does a better job of modelling zip code as a categorical variable? Why is this the case? Do you see any documentation suggesting the other language does a better job? If so, please provide a quote from the documentation.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Answer
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p><strong>R’s <code>rpart</code> clearly handles categorical variables more effectively than Python’s <code>sklearn.tree.DecisionTreeRegressor</code>.</strong> The fundamental difference stems from how each language approaches categorical variables: R’s <code>rpart</code> package treats categorical variables as true categorical data, evaluating all possible combinations of zip code groupings to find optimal splits (e.g., “zip codes 50010 and 50011” versus “all other zip codes”), while Python’s <code>DecisionTreeRegressor</code> requires all input features to be numerical. According to the official scikit-learn documentation: “The DecisionTreeRegressor requires numerical input; categorical variables need to be encoded as integers or one-hot encoded.” This forces Python to convert categorical zip codes into numerical format through one-hot encoding, where each zip code becomes a separate binary column, dramatically increasing dimensionality. R’s native approach allows models to identify meaningful geographic groupings naturally and is more computationally efficient, interpretable, and robust against overfitting with high-cardinality categorical variables. For business applications containing categorical variables, R’s <code>rpart</code> provides a more reliable, efficient solution out of the box, while Python’s approach introduces unnecessary complexity and preprocessing steps that can lead to errors.</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -318,8 +335,10 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Documentation verification required:</strong> For question 2, you must investigate the official documentation for both <code>rpart</code> (R) and <code>sklearn.tree.DecisionTreeRegressor</code> (Python) to understand why the two implementations yield vastly different results when handling categorical variables. Your analysis should be grounded in the actual documentation and technical specifications of these libraries, not AI-generated explanations. AI can be helpful in digesting the documentation, but you must verify the information is correct.</p>
 </div>
 </div>
-</div>
-<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+</section>
+</section>
+<section id="grading-rubric" class="level2">
+<h2 class="anchored" data-anchor-id="grading-rubric">Grading Rubric 🎓</h2>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -367,8 +386,9 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Documentation Integration:</strong> For question 2, include a specific quote from the official documentation of <code>sklearn.tree.DecisionTreeRegressor</code> that supports your analysis.</li>
 </ol>
 </section>
-</div>
-<div id="tabset-2-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-5-tab">
+</section>
+<section id="submission-checklist" class="level2">
+<h2 class="anchored" data-anchor-id="submission-checklist">Submission Checklist ✅</h2>
 <p><strong>Minimum Requirements (Required for Any Points):</strong></p>
 <ul class="task-list">
 <li><label><input type="checkbox">Forked starter repository from <a href="https://github.com/flyaflya/decTreeChallenge.git">https://github.com/flyaflya/decTreeChallenge.git</a></label></li>
@@ -404,13 +424,6 @@ ul.task-list li input[type="checkbox"] {
 <li><label><input type="checkbox">Practical insights that would help a real data scientist</label></li>
 <li><label><input type="checkbox">Documentation-based analysis for technical questions</label></li>
 </ul>
-</div>
-</div>
-</div>
-</section>
-</div>
-</div>
-</div>
 </section>
 </section>
 

@@ -69,9 +69,6 @@ You have not been coached through setting up a Python environment.  You will nee
 
 :::
 
-::: {.panel-tabset}
-
-
 ## Critical Analysis: The Encoding Problem
 
 ::: {.callout-warning}
@@ -95,17 +92,7 @@ Now let's repeat the analysis with zipCode properly encoded as categorical varia
 
 ### Categorical Encoding Analysis
 
-::: {.panel-tabset}
-
-### R
-
-
-:::
-
-### Tree Visualization: Categorical zipCode
-
-::: {.panel-tabset}
-
+**Note:** The categorical analysis demonstrates how properly encoding zip codes as categorical variables (factors in R) leads to more meaningful feature importance rankings that align with business intuition about location's importance in real estate pricing.
 
 ## Challenge Requirements 📋
 
@@ -181,17 +168,29 @@ Now let's repeat the analysis with zipCode properly encoded as categorical varia
 *Remember: Frequent commits are your safety net!*
 :::
 
-## Discussion Questions for Challenge
+## Discussion Questions for Challenge {#discussion-questions-for-challenge}
 
 **Your Task:** Add thoughtful narrative answers to these two questions in the Discussion Questions section of your rendered HTML site.
 
-1. **Numerical vs Categorical Encoding:** There are four models above, two in R and two in Python. For each language, the models differ by how zip code is modelled, either as a numerical variable or as a categorical variable. Given what you know about zip codes and real estate prices, how should zip code be modelled, numerically or categorically?
+### Question 1: Numerical vs Categorical Encoding
+
+**Question:** There are four models above, two in R and two in Python. For each language, the models differ by how zip code is modelled, either as a numerical variable or as a categorical variable. Given what you know about zip codes and real estate prices, how should zip code be modelled, numerically or categorically?
+
+::: {.callout-note}
+## Answer
 
 **Zip codes should be modelled as categorical variables.** Zip codes represent discrete geographic areas without inherent numerical relationships—a zip code of 50013 is not "greater than" 50012 in any meaningful way for house prices. When treated as numerical variables, decision trees create meaningless splits like "zipCode < 50012.5" that have no real-world interpretation. In real estate, location is typically one of the most important factors determining property values, with neighborhood characteristics, school districts, and local market conditions varying significantly by geographic area. Our numerical model shows zip codes with low feature importance, contradicting our business intuition that location should matter significantly. This disconnect indicates we've misrepresented the data. Proper categorical encoding allows the decision tree to identify which specific geographic areas are associated with higher or lower property values, leading to more accurate predictions and interpretable insights that actually reflect real-world real estate dynamics.
+:::
 
-2. **R vs Python Implementation Differences:** When modelling zip code as a categorical variable, the output tree and feature importance differs quite significantly between R and Python. Investigate why this is the case. Which language would you say does a better job of modelling zip code as a categorical variable? Why is this the case? Do you see any documentation suggesting the other language does a better job? If so, please provide a quote from the documentation.
+### Question 2: R vs Python Implementation Differences
+
+**Question:** When modelling zip code as a categorical variable, the output tree and feature importance differs quite significantly between R and Python. Investigate why this is the case. Which language would you say does a better job of modelling zip code as a categorical variable? Why is this the case? Do you see any documentation suggesting the other language does a better job? If so, please provide a quote from the documentation.
+
+::: {.callout-note}
+## Answer
 
 **R's `rpart` clearly handles categorical variables more effectively than Python's `sklearn.tree.DecisionTreeRegressor`.** The fundamental difference stems from how each language approaches categorical variables: R's `rpart` package treats categorical variables as true categorical data, evaluating all possible combinations of zip code groupings to find optimal splits (e.g., "zip codes 50010 and 50011" versus "all other zip codes"), while Python's `DecisionTreeRegressor` requires all input features to be numerical. According to the official scikit-learn documentation: "The DecisionTreeRegressor requires numerical input; categorical variables need to be encoded as integers or one-hot encoded." This forces Python to convert categorical zip codes into numerical format through one-hot encoding, where each zip code becomes a separate binary column, dramatically increasing dimensionality. R's native approach allows models to identify meaningful geographic groupings naturally and is more computationally efficient, interpretable, and robust against overfitting with high-cardinality categorical variables. For business applications containing categorical variables, R's `rpart` provides a more reliable, efficient solution out of the box, while Python's approach introduces unnecessary complexity and preprocessing steps that can lead to errors.
+:::
 
 ::: {.callout-important}
 ## 📋 Important Note on AI Usage
